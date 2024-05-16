@@ -64,4 +64,7 @@ class MySettings():
         config.read('config.ini')
         return [each_val for (each_key, each_val) in config.items("main")  if each_key in key_setting]
 
-
+    def load_setting(self,key_setting):
+        config = ConfigParser()
+        config.read('config.ini')
+        return config.get('main', key_setting)
