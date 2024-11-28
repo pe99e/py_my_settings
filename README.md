@@ -11,7 +11,7 @@ use load_setting(setting_name) to load a single setting and load_all_settings() 
 
 ## Example Code
 
-from mysettings.settings import MySettings
+from my_settings import my_settings
 
 
 if __name__ == '__main__':
@@ -19,10 +19,10 @@ if __name__ == '__main__':
   "watchdirectory": "ciao",
   "file_match_dict_path": "file_matching.json"
 }
-   sett=MySettings(settings)
+   sett=my_settings.MySettings(settings,"v6")
 
 
-   sett.createinitfile()
+   sett.create_init_file()
    print("LOAD SETTINGS")
    var_lists=sett.load_specific_settings("watchdirectory",'file_match_dict_path')
    #print(sett.load_specific_settings_loop_multi("watchdirectory",'file_match_dict_path'))
